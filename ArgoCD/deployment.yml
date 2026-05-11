@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
       - name: secretsanta-generator-code-app
-        image: ghc18081998/secretsanta-generator-code:4
+        image: $IMAGE_NAME:$BUILD_NUMBER
         imagePullPolicy: "Always"
         ports:
         - containerPort: 3000
