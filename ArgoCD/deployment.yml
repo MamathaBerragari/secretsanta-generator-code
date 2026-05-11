@@ -1,23 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
+
 metadata:
   name: secretsanta-generator-code-app
+
   labels:
     app: secretsanta-generator-code-app
+
 spec:
   replicas: 2
+
   selector:
     matchLabels:
       app: secretsanta-generator-code-app
+
   template:
     metadata:
       labels:
         app: secretsanta-generator-code-app
+
     spec:
       terminationGracePeriodSeconds: 30
+
       containers:
       - name: secretsanta-generator-code-app
-        image: $IMAGE_NAME:$BUILD_NUMBER
-        imagePullPolicy: "Always"
+
+        image: mamathaberragari/secretsanta-generator-code:13
+
+        imagePullPolicy: Always
+
         ports:
         - containerPort: 3000
