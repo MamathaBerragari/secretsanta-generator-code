@@ -25,7 +25,7 @@ spec:
       containers:
       - name: secretsanta-generator-code-app
 
-        image: mamathaberragari/secretsanta-generator-code:13
+        image: mamathaberragari/employee-deatils:14
 
         imagePullPolicy: Always
 
